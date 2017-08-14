@@ -1,0 +1,41 @@
+﻿@using Library.Model
+@model IEnumerable<Book>
+
+@{
+    ViewBag.Title = "Books";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Add book", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Pages
+            </td>
+            <td>
+                @item.PublishingDate
+            </td>
+            <td>
+                @item.PublishingHouse
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Web", "Library.Web\Library.Web.csproj", "{BE161173-B81D-4233-9D55-1715072CD9A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Model", "Library.Model\Library.Model.csproj", "{75CB2BF8-CC26-4627-9EE7-6A1FA59B2DBA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE161173-B81D-4233-9D55-1715072CD9A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE161173-B81D-4233-9D55-1715072CD9A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE161173-B81D-4233-9D55-1715072CD9A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE161173-B81D-4233-9D55-1715072CD9A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75CB2BF8-CC26-4627-9EE7-6A1FA59B2DBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75CB2BF8-CC26-4627-9EE7-6A1FA59B2DBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75CB2BF8-CC26-4627-9EE7-6A1FA59B2DBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75CB2BF8-CC26-4627-9EE7-6A1FA59B2DBA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
