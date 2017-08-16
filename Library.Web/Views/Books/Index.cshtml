@@ -1,5 +1,6 @@
-﻿@using Library.Model
-@model IEnumerable<Book>
+﻿@using Library.Web.Models
+@using PagedList.Mvc;
+@model IndexBooksViewModel
 
 @{
     ViewBag.Title = "Books";
@@ -10,12 +11,35 @@
 <p>
     @Html.ActionLink("Add book", "Create")
 </p>
+
+@using (Html.BeginForm("Index", "Books", FormMethod.Get))
+{
+    <p>
+        Find by name: @Html.TextBox("Filter", Model.Filter as string)
+        @Html.Hidden("Page", 1)
+        @Html.HiddenFor(m => m.Sort)
+
+        <input type="submit" value="Search" />
+    </p>
+}
 <table class="table">
     <tr>
+        <th>
+            @Html.ActionLink("Name", "Index", new { sort = String.IsNullOrEmpty(Model.Sort) ? "name_desc" : "", filter = Model.Filter, page = Model.Page })
+        </th>
+        <th>
+            Pages
+        </th>
+        <th>
+            @Html.ActionLink("Publishing date", "Index", new { sort = Model.Sort == "date_asc" ? "date_desc" : "date_asc", filter = Model.Filter, page = Model.Page })
+        </th>
+        <th>
+            Publishing house
+        </th>
         <th></th>
     </tr>
 
-    @foreach (var item in Model)
+    @foreach (var item in Model.Books)
     {
         <tr>
             <td>
@@ -39,3 +63,9 @@
     }
 
 </table>
+<br />
+
+Page @(Model.Books.PageCount < Model.Books.PageNumber ? 0 : Model.Books.PageNumber) of @Model.Books.PageCount
+
+@Html.PagedListPager(Model.Books, page => Url.Action("Index",
+    new { sort = Model.Sort, filter = Model.Filter, page }))
