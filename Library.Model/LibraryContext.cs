@@ -13,6 +13,7 @@ namespace Library.Model
         }
 
         public virtual DbSet<Book> Books { get; set; }
+        public virtual DbSet<Magazine> Magazines { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

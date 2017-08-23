@@ -53,11 +53,29 @@
   <ItemGroup>
     <Compile Include="Book.cs" />
     <Compile Include="LibraryContext.cs" />
+    <Compile Include="Magazine.cs" />
+    <Compile Include="Migrations\201708141639340_InitialCreate.cs" />
+    <Compile Include="Migrations\201708141639340_InitialCreate.Designer.cs">
+      <DependentUpon>201708141639340_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708231624530_magazines.cs" />
+    <Compile Include="Migrations\201708231624530_magazines.Designer.cs">
+      <DependentUpon>201708231624530_magazines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201708141639340_InitialCreate.resx">
+      <DependentUpon>201708141639340_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708231624530_magazines.resx">
+      <DependentUpon>201708231624530_magazines.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
